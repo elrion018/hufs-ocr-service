@@ -5,8 +5,10 @@
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-pdf": "^5.0.0",
     "react-scripts": "3.2.0",
-    "tesseract.js": "^2.0.0-beta.1"
+    "tesseract.js": "^2.0.0-beta.1",
+    "xlsx": "^0.16.8"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -137,7 +137,7 @@ function Main() {
       for (let i = 0; i < splited3.length; i++) {
         let temp = splited3[i];
         for (let j = 0; j < except.length; j++) {
-          temp = temp.replaceAll(except[j], "");
+          temp = temp.replace(except[j], "");
         }
         if (temp !== "") {
           res.push(temp.toLowerCase());

@@ -156,12 +156,14 @@ function Main() {
       if (!selectedFiles) {
         throw "인식할 파일을 첨부해주세요.";
       }
-      if (selectedFiles.length > 3) {
-        throw "3개 이하의 파일을 첨부해주세요.";
-      }
+
       if (!selectedLangs) {
         throw "인식할 언어를 선택해주세요.";
       }
+      if (!selectedFiles.length > 3) {
+        throw "파일은 3개 이하까지 첨부 가능합니다.";
+      }
+
       if (selectedLangs.length >= 4) {
         throw "인식할 언어를 3개 이하로 선택해주세요.";
       }
@@ -193,10 +195,17 @@ function Main() {
   }
 
   async function handleFileChange(e) {
-    const selectedFiles = Array.from(e.target.files);
-    // ConvertPdfToImages(selectedFiles[0]);
-    setSelectedFiles(selectedFiles);
-    return;
+    try {
+      const selectedFiles = Array.from(e.target.files);
+      if (selectedFiles.length > 3) {
+        throw "파일은 3개 이하까지 첨부 가능합니다.";
+      }
+
+      setSelectedFiles(selectedFiles);
+      return;
+    } catch (error) {
+      return alert(error);
+    }
   }
 
   function makeExcelFiles(splitedText) {

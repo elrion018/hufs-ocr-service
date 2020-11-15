@@ -214,7 +214,7 @@ function Main() {
     <div className="main-container">
       <div className="main-body-container">
         <div>
-          <h1>한국외국어대학교 간편 OCR 서비스</h1>
+          <h1>한국외대 학생 맞춤형 간편 OCR 서비스</h1>
           <a href="https://namu.wiki/w/OCR" target="blank">
             OCR이란? 자세한 내용은 링크를 참조하세요.
           </a>

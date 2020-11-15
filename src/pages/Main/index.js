@@ -156,6 +156,9 @@ function Main() {
       if (!selectedFiles) {
         throw "인식할 파일을 첨부해주세요.";
       }
+      if (selectedFiles.length > 3) {
+        throw "3개 이하의 파일을 첨부해주세요.";
+      }
       if (!selectedLangs) {
         throw "인식할 언어를 선택해주세요.";
       }

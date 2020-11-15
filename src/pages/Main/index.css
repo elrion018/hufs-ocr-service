@@ -5,10 +5,6 @@
 .main-body-container {
   display: flex;
   flex-direction: column;
-}
-
-.main-submit-form {
-  display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
+  width: 1000px;
+  height: 1000px;
 }

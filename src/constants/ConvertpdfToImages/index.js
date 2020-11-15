@@ -4,7 +4,6 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.j
 const PDFJS = pdfjsLib;
 
 async function ConvertPdfToImages() {
-  console.log("call");
   const createCanvas = (width, height) => {
     const canvas = document.createElement("canvas");
     canvas.width = width;
@@ -122,7 +121,6 @@ async function ConvertPdfToImages() {
       type: "image/png",
     });
   }
-  console.log(images);
 }
 
 export default ConvertPdfToImages;

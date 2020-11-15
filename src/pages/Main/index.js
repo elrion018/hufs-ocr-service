@@ -17,7 +17,6 @@ function Main() {
       const worker = createWorker({
         logger: (m) => {
           if (m) {
-            console.log(m);
             if (
               m.progress > 0 &&
               m.progress < 1 &&
@@ -108,7 +107,11 @@ function Main() {
         /\“/g,
         /\”/g,
         /\,/g,
+        /\</g,
+        /\>/g,
+        /\~/g,
         /\./g,
+        /\`/g,
         /\!/g,
         /\@/g,
         /\#/g,
@@ -130,13 +133,17 @@ function Main() {
         /[0-9]/g,
         /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g,
       ];
-
+      const res = [];
       for (let i = 0; i < splited3.length; i++) {
+        let temp = splited3[i];
         for (let j = 0; j < except.length; j++) {
-          splited3[i] = splited3[i].replace(except[j], "").toLowerCase();
+          temp = temp.replaceAll(except[j], "");
+        }
+        if (temp !== "") {
+          res.push(temp.toLowerCase());
         }
       }
-      return splited3;
+      return res;
     } catch (error) {
       return alert(error);
     }
@@ -145,7 +152,7 @@ function Main() {
   async function handleSubmit(e) {
     try {
       e.preventDefault();
-      console.log(e.target.value);
+
       if (!selectedFiles) {
         throw "인식할 파일을 첨부해주세요.";
       }
@@ -224,7 +231,10 @@ function Main() {
             4. 인식이 끝나길 기다렸다가 인식 내용을 담은 파일을 다운로드 받는다.
           </p>
           <h3>안내 및 주의사항</h3>
-          <p>* 현재 웹사이트 이용에 최적화되어있습니다.</p>
+          <p>
+            * 현재 웹사이트 이용에 최적화되어있습니다. 가급적 스마트폰으로
+            이용하지 마세요.
+          </p>
           <p>
             * 현재 PDF 파일 형식의 파일들은 지원하지 않습니다. (다음 업데이트에
             지원하기 위해 열심히 개발 중.)
@@ -240,12 +250,16 @@ function Main() {
           </p>
           <p>
             * 문자가 흐릿한 이미지, 기울어진 이미지, 문자 외 다른 요소가 많은
-            이미지, 정자체와 거리가 먼 문자체 등은 당연하게도 인식률의 큰 저하를
+            이미지, 정자체와 거리가 먼 문자 등은 당연하게도 인식률의 큰 저하를
             가져옵니다.
           </p>
           <p>
             * 'Extracting words'(단어 추출하기) 기능의 경우, 인식한 단어를
             고스란히 가져올 뿐 표제어로 바꿔주지 않습니다. 양해 바랍니다.
+          </p>
+          <p>
+            * 'Extracting words'(단어 추출하기) 기능의 경우, 한글은 모두
+            제외시킵니다.
           </p>
           <p>
             * 등록하신 파일은 따로 저장하지 않습니다. 안심하시고 쓰셔도 됩니다.

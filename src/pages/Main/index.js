@@ -214,7 +214,7 @@ function Main() {
     <div className="main-container">
       <div className="main-body-container">
         <div>
-          <h1>한국외대 학생 맞춤형 간편 OCR 서비스</h1>
+          <h1>한국외대생이 만든 간편 OCR 서비스 - Beta version</h1>
           <a href="https://namu.wiki/w/OCR" target="blank">
             OCR이란? 자세한 내용은 링크를 참조하세요.
           </a>
@@ -255,7 +255,9 @@ function Main() {
           </p>
           <p>
             * 'Extracting words'(단어 추출하기) 기능의 경우, 인식한 단어를
-            고스란히 가져올 뿐 표제어로 바꿔주지 않습니다. 양해 바랍니다.
+            고스란히 가져올 뿐 표제어로 바꿔주지 않습니다. 양해 바랍니다. 추후
+            각 언어의 전공지식으로 표제어로 바꾸는데 도움을 주실 분들을 모을
+            생각입니다.
           </p>
           <p>
             * 'Extracting words'(단어 추출하기) 기능의 경우, 한글은 모두

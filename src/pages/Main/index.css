@@ -1,3 +1,9 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-textinput {
   width: 1000px;
   height: 300px;
@@ -7,4 +13,11 @@
   flex-direction: column;
   width: 1000px;
   height: 1000px;
+}
+.main-submit-extractor-button {
+  width: 300px;
+  margin-top: 30px;
+}
+.main-submit-reading-button {
+  width: 300px;
 }

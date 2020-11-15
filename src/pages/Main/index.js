@@ -212,10 +212,10 @@ function Main() {
             OCR이란? 자세한 내용은 링크를 참조하세요.
           </a>
           <h3>사용법</h3>
-          <p>1. 인식하길 원하는 이미지 파일을 첨부한다.</p>
+          <p>1. 인식하길 원하는 이미지 파일들을 첨부한다.</p>
           <p>2. 인식하길 원하는 언어를 선택한다.</p>
           <p>
-            3. 'Extracting words'(단어 추출하기)와 ' Extracting text'(본문내용
+            3. 'Extracting words'(단어 추출하기)와 'Extracting text'(본문내용
             추출하기) 중 원하는 서비스의 버튼을 누른다.
           </p>
           <p>
@@ -223,13 +223,14 @@ function Main() {
           </p>
           <h3>안내 및 주의사항</h3>
           <p>
-            * 현재 PDF파일 형식의 파일들은 지원하지 않습니다. (다음 업데이트를
-            위해 열심히 개발 중.)
+            * 현재 PDF파일 형식의 파일들은 지원하지 않습니다. (다음 업데이트에
+            지원하기 위해 열심히 개발 중.)
           </p>
           <p>
             * PDF 파일의 자료들은 필요한 부분을 이미지 캡처하여 png, jpg
             확장자의 파일로 만들어 사용하시길 바랍니다.
           </p>
+          <p>* 현재 서양어대학에서 쓰이는 언어들만 지원하고 있습니다.</p>
           <p>
             * 많은 언어를 선택하여 인식하게 되면 인식률이 현저히 떨어지므로 언어
             선택을 3개 이하로 제한하고 있습니다.
@@ -248,6 +249,13 @@ function Main() {
           <p>
             * 마지막으로, 버그리포팅, 의견 제시 및 기타 사항은
             elrion018@gmail.com 으로 연락주세요.
+          </p>
+          <p>
+            * Developer profile :{" "}
+            <a href="https://github.com/elrion018" target="blank">
+              https://github.com/elrion018
+            </a>{" "}
+            (교류, 프로젝트 협업 요청 환영)
           </p>
         </div>
         <h3>파일 선택(png, jpg 확장자를 가진 이미지 파일)</h3>
@@ -281,6 +289,7 @@ function Main() {
           <input type="checkbox" value="swe"></input>
           <label>스웨덴어(Swedish)</label>
         </div>
+
         <input
           type="submit"
           className="main-submit-extractor-button"
@@ -290,7 +299,7 @@ function Main() {
         <input
           type="submit"
           className="main-submit-reading-button"
-          value="Reading text"
+          value="Extracting text"
           onClick={handleSubmit}
         ></input>
 

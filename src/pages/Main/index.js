@@ -343,6 +343,8 @@ function Main() {
           <label>아제르바이잔어(Azerbaijani)</label>
           <input type="checkbox" value="aze_cyrl"></input>
           <label>아제르바이잔어(Azerbaijani - Cyrillic)</label>
+          <input type="checkbox" value="ara"></input>
+          <label>아랍어(Arabic)</label>
         </div>
 
         <input

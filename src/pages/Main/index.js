@@ -301,6 +301,7 @@ function Main() {
         ></input>
         <h3>인식 언어 선택(최대 3개 언어까지 선택 가능)</h3>
         <div className="main-lang-checkboxes" onChange={handleCheckedLangs}>
+          <h4>서양어</h4>
           <input type="checkbox" value="eng"></input>
           <label>영어(English)</label>
           <input type="checkbox" value="rus"></input>
@@ -321,6 +322,27 @@ function Main() {
           <label>노르웨이어(Norwegian)</label>
           <input type="checkbox" value="swe"></input>
           <label>스웨덴어(Swedish)</label>
+          <h4>동양어</h4>
+          <input type="checkbox" value="chi_sim"></input>
+          <label>중국어 간체(Chinese - Simplified)</label>
+          <input type="checkbox" value="chi_tra"></input>
+          <label>중국어 번체(Chinese - Traditional)</label>
+          <input type="checkbox" value="jpn"></input>
+          <label>일본어(Japanese)</label>
+          <input type="checkbox" value="ind"></input>
+          <label>인도네시아어(Indonesian)</label>
+          <input type="checkbox" value="vie"></input>
+          <label>베트남어(Vietnamese)</label>
+          <input type="checkbox" value="san"></input>
+          <label>인도어(산스크리트, Sanskrit)</label>
+          <input type="checkbox" value="tur"></input>
+          <label>터키어(Turkish)</label>
+          <input type="checkbox" value="fas"></input>
+          <label>이란어(Persian)</label>
+          <input type="checkbox" value="aze"></input>
+          <label>아제르바이잔어(Azerbaijani)</label>
+          <input type="checkbox" value="aze_cyrl"></input>
+          <label>아제르바이잔어(Azerbaijani - Cyrillic)</label>
         </div>
 
         <input

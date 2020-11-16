@@ -143,6 +143,7 @@ function Main() {
           res.push(temp.toLowerCase());
         }
       }
+      res.sort();
       return res;
     } catch (error) {
       return alert(error);

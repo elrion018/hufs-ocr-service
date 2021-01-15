@@ -1,3 +1,3 @@
 
 ## hufs-ocr-service
-[DEMO](https://hufsocr.netlify.app/)
+[PLAY](https://hufsocr.netlify.app/)
